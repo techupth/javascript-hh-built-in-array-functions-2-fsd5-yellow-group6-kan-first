@@ -374,3 +374,24 @@ const bills = [
 ];
 
 // Start coding here
+const bill = [
+  {
+    id: "1",
+    transactionDate: "2021-08-01",
+    total: 20000,
+    location: "Chonburi",
+    paymentType: "Cash",
+    member: {
+      name: "Mark",
+      age: "26",
+    },
+    pointRate: 0.01,
+  },
+  
+];
+
+const totalAmount = bills.reduce((accumulator, currentBill) => {
+  return accumulator + currentBill.total;
+}, 0);
+
+console.log(`Total bill transaction is ${totalAmount}`);

@@ -374,4 +374,15 @@ const bills = [
 ];
 
 // Start coding here
-const totalMembers;
+//const totalMembers;
+const bill = [
+];
+const uniqueMembers = bills.reduce((membersSet, bill) => {
+  if (bill.member !== null) {
+    membersSet.add(bill.member.name);
+  }
+  return membersSet;
+}, new Set());
+const uniqueMembersCount = uniqueMembers.size;
+
+console.log(`Unique Members Count: ${uniqueMembersCount}`);
