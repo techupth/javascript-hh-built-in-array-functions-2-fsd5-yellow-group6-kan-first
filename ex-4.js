@@ -374,4 +374,20 @@ const bills = [
 ];
 
 // Start coding here
-const totalMembers;
+
+
+let billsWithoutNull = bills.filter((cutNull) => {
+  return cutNull.member !== null;
+});
+
+const billMembers = billsWithoutNull.map((memberName) => {
+  return memberName.member.name
+});
+
+
+const totalMembers = billMembers.filter((cutSameName,index) => {
+  return billMembers.indexOf(cutSameName) === index
+});
+console.log(totalMembers);
+console.log(totalMembers.length);
+
